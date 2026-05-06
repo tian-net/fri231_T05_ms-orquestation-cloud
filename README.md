@@ -19,10 +19,17 @@ Se implementó un cluster de Kubernetes utilizando la distribución certificada 
 - Provisionamiento de 2 instancias EC2 con Ubuntu 24.04 LTS.
 - Instalación de K3s en el nodo Master y unión del nodo Worker mediante token de seguridad.
 - Validación de alta disponibilidad con `kubectl get nodes`.
+![kubectl get nodes](Evidencias/Captura%20de%20pantalla%202026-05-06%20101219.png)
+`kubectl cluster-info`.
+![kubectl cluster-info](Evidencias/kubectl-cluster-info.png)
+
+
 ## Fase 2: Escalabilidad y Resiliencia
 - Configuración de Horizontal Pod Autoscaler (HPA) para escalado dinámico (2-5 réplicas).
 - Ejecución de un Rolling Update de la imagen `nginx:1.14.2` a `1.16.1` sin pérdida de servicio.
+![actualizacion de version](Evidencias/update%20en%20ejecución.png)
 - Creación de un EBS Snapshot en la consola de AWS como estrategia de recuperación ante desastres.
+![Snapshot realizado](Evidencias/snap.png)
 ## Fases 3, 4 y 5: Seguridad Avanzada
 - **RBAC**: Creación de Roles y Bindings para restringir la eliminación de pods.
 - **Network Policies**: Implementación de reglas para bloquear el tráfico no autorizado entre pods.
