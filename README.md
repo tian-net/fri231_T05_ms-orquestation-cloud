@@ -20,7 +20,7 @@ Se implementó un cluster de Kubernetes utilizando la distribución certificada 
 - Instalación de K3s en el nodo Master y unión del nodo Worker mediante token de seguridad.
 - Validación de alta disponibilidad con `kubectl get nodes`.
 ![kubectl get nodes](Evidencias/Captura%20de%20pantalla%202026-05-06%20101219.png)
-`kubectl cluster-info`.
+- `kubectl cluster-info`.
 ![kubectl cluster-info](Evidencias/kubectl-cluster-info.png)
 
 
