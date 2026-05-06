@@ -3,31 +3,15 @@
 
 ---
 
-## 👥 Equipo de Trabajo
+##  Equipo de Trabajo
 *   **Estudiante A (Infraestructura):** Freddy Sebastian Martin
 *   **Estudiante B (Seguridad):** Luis Felipe Lévano
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+##  Arquitectura del Sistema
 Se implementó un cluster de Kubernetes utilizando la distribución certificada **K3s** sobre instancias **Amazon EC2 (t3.medium)** en AWS Academy. Esta arquitectura garantiza alta disponibilidad y eficiencia operativa.
-```mermaid
-graph TD
-    subgraph AWS_Cloud [AWS Academy Lab]
-        subgraph VPC [VPC: Kubernetes Cluster]
-            M[k8s-master] -- "Orquestación" --> W[k8s-worker]
-            W --> P1(mi-app pod-1)
-            W --> P2(mi-app pod-2)
-            W --> P3(mi-app pod-3)
-            NP{fa:fa-shield NetPolicy} -.-> P1
-        end
-        S3[(S3: EBS Snapshot)]
-        Trivy{{Trivy: Scan}}
-        M -.-> S3
-        Trivy -.-> W
-    end
-    User((DevOps Team)) -- "SSH / Kubectl" -->
-```
+
 
 
 Proceso de Implementación
