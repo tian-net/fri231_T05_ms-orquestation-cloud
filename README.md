@@ -1,15 +1,17 @@
-# Este es el diseño final para tu archivo README.md. Está optimizado para ser conciso (cumpliendo la regla de máximo 2 páginas), profesional y con un énfasis especial en la sección de "Problemas y Soluciones", que es la que más valor tiene para tu calificación.
+# Orquestación Cloud y Seguridad Profesional (K8s)
+### ID de Repositorio: `fri231_T05_ms-orquestation-cloud`
 
-Orquestación Cloud y Seguridad Profesional (K8s)
-ID de Repositorio: fri231_T05_ms-orquestation-cloud
-Equipo de Trabajo
-Estudiante A (Infraestructura): Freddy Sebastian Martin
+---
 
-Estudiante B (Seguridad): Luis Felipe Lévano
+## 👥 Equipo de Trabajo
+*   **Estudiante A (Infraestructura):** Freddy Sebastian Martin
+*   **Estudiante B (Seguridad):** Luis Felipe Lévano
 
-# Arquitectura del Sistema
-Para este proyecto, se implementó un cluster de Kubernetes utilizando la distribución K3s sobre instancias Amazon EC2 (t3.medium). Esta solución garantiza alta disponibilidad y eficiencia en el entorno de AWS Academy.
+---
 
+## 🏗️ Arquitectura del Sistema
+Se implementó un cluster de Kubernetes utilizando la distribución certificada **K3s** sobre instancias **Amazon EC2 (t3.medium)** en AWS Academy. Esta arquitectura garantiza alta disponibilidad y eficiencia operativa.
+```mermaid
 graph TD
     subgraph AWS_Cloud [AWS Academy Lab]
         subgraph VPC [VPC: Kubernetes Cluster]
@@ -24,7 +26,9 @@ graph TD
         M -.-> S3
         Trivy -.-> W
     end
-    User((DevOps)) -- "SSH / Kubectl" --> M
+    User((DevOps Team)) -- "SSH / Kubectl" -->
+```
+
 
 Proceso de Implementación
 Fase 1: Infraestructura Base
